@@ -10,10 +10,10 @@ export class UnloadConfigCommand extends CommandTemplate {
     }
     override id = CommandID.UnloadConfig;
     override call(item: SnippetConfigItem) {
-        UnloadConfigCommand._callback(item.label);
+        UnloadConfigCommand._callbacks.map(f => f(item.label));
     }
-    private static _callback: (id: string) => void = () => {};
-    public static set callback(f: (id: string) => void) {
-        UnloadConfigCommand._callback = f;
+    private static _callbacks = new Array<(id: string) => void>();
+    public static addCallback(f: (id: string) => void) {
+        UnloadConfigCommand._callbacks.push(f);
     }
 }

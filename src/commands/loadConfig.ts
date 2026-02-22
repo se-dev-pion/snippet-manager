@@ -22,11 +22,11 @@ export class LoadConfigCommand extends CommandTemplate {
             })
         )?.at(0);
         if (file) {
-            await LoadConfigCommand._callback(file);
+            await Promise.all(LoadConfigCommand._callbacks.map(f => f(file)));
         }
     }
-    private static _callback: (file: vscode.Uri) => Promise<void> = async () => {};
-    public static set callback(f: (file: vscode.Uri) => Promise<void>) {
-        LoadConfigCommand._callback = f;
+    public static _callbacks = new Array<(file: vscode.Uri) => Promise<void>>();
+    public static addCallback(f: (file: vscode.Uri) => Promise<void>) {
+        LoadConfigCommand._callbacks.push(f);
     }
 }

@@ -1,5 +1,5 @@
 import vscode from 'vscode';
 
-export interface TreeView {
-    register(window: typeof vscode.window): void;
+export interface TreeView<T> {
+    register(provider: T): void;
 }
