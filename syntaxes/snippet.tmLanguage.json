@@ -1,0 +1,1900 @@
+{
+    "scopeName": "source.snippet",
+    "patterns": [
+        {
+            "begin": "<(main) (scope)=(\")(c)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.c",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.c"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(cpp)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.cpp",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.cpp"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(csharp)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.csharp",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.cs"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(java)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.java",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.java"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(kotlin)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.kotlin",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.kotlin"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(dart)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.dart",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.dart"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(swift)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.swift",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.swift"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(javascript)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.javascript",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.js"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(typescript)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.typescript",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.ts"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(vue)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.vue",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.vue"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(javascriptreact)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.javascriptreact",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.jsx"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(typescriptreact)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.typescriptreact",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.tsx"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(svelte)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.svelte",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.svelte"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(go)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.go",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.go"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(python)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.python",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.python"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(ruby)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.ruby",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.ruby"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(shellscript)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.shellscript",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.shell"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(php)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.php",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.php"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(perl)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.perl",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.perl"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(rust)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.rust",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.rust"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(lua)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.lua",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.lua"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(sql)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.sql",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.sql"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(odin)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.odin",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.odin"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(zig)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.zig",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.zig"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(d)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.d",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.d"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(v)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.v",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.v"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(scala)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.scala",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.scala"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(groovy)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.groovy",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.groovy"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(fsharp)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.fsharp",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.fsharp"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(nim)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.nim",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.nim"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(scss)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.scss",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.css.scss"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(sass)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.sass",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.sass"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(less)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.less",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.css.less"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(stylus)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.stylus",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.stylus"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(json)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.json",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.json"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(yaml)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.yaml",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.yaml"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(toml)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.toml",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.toml"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(xml)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.xml",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "text.xml"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(protobuf)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.protobuf",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.proto"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(graphql)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.graphql",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.graphql"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(goctl)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.goctl",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.goctl"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(html)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.html",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "text.html.basic"
+                }
+            ]
+        },
+        {
+            "begin": "<(main) (scope)=(\")(dockerfile)(\")>(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)</(main)>",
+            "name": "meta.embedded.block.dockerfile",
+            "beginCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "entity.name.tag.localname.xml"
+                },
+                "2": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "3": {
+                    "name": "string.quoted"
+                },
+                "4": {
+                    "name": "entity.other.attribute-name.localname.xml"
+                },
+                "5": {
+                    "name": "string.quoted"
+                },
+                "6": {
+                    "name": "comment.block.xml"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "meta.tag.xml"
+                },
+                "1": {
+                    "name": "comment.block.xml"
+                },
+                "2": {
+                    "name": "entity.name.tag.localname.xml"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.dockerfile"
+                }
+            ]
+        },
+        {
+            "include": "text.xml"
+        }
+    ]
+}

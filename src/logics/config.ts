@@ -2,7 +2,7 @@ import vscode from 'vscode';
 import { configKey } from '../common/constants';
 import { ObservableTreeDataProviderTemplate } from './common/templates';
 import { xmlParser } from '../common/utils';
-import { snippetConfigSchema } from '../common/types';
+import { snippetConfigSchema } from './schema';
 
 export class SnippetConfigItem extends vscode.TreeItem {
     public constructor(

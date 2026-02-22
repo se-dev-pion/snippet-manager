@@ -9,14 +9,14 @@ export function mountSnippetConfigs(context: vscode.ExtensionContext) {
                 try {
                     const data = await loadSnippetConfig(item.resourceUri);
                     for (const config of data.root.item) {
-                        if (![document.languageId, '*'].includes(config.scope)) {
+                        if (![document.languageId, '*'].includes(config.main['@_scope'])) {
                             continue;
                         }
                         const snippet = new vscode.CompletionItem(
                             config.key,
                             vscode.CompletionItemKind.Snippet
                         );
-                        snippet.insertText = new vscode.SnippetString(config.main);
+                        snippet.insertText = new vscode.SnippetString(config.main['#text']);
                         snippet.detail = config.tip;
                         snippets.push(snippet);
                     }
