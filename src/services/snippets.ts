@@ -2,7 +2,7 @@ import vscode from 'vscode';
 import { loadedConfigsDataProvider } from '../logics/config';
 import { loadSnippetConfig } from '../logics/parse';
 
-export function mountSnippetConfigs(context: vscode.ExtensionContext) {
+export async function mountSnippetConfigs(context: vscode.ExtensionContext) {
     const provider: vscode.CompletionItemProvider = {
         async provideCompletionItems(document, _position, _token, _context) {
             const snippets = new Array<vscode.CompletionItem>();
@@ -19,7 +19,7 @@ export function mountSnippetConfigs(context: vscode.ExtensionContext) {
                             config.key,
                             vscode.CompletionItemKind.Snippet
                         );
-                        snippet.insertText = new vscode.SnippetString(config.main['#text']);
+                        snippet.insertText = new vscode.SnippetString(config.main['#text'].trim());
                         snippet.detail = config.tip;
                         snippets.push(snippet);
                     }
@@ -30,8 +30,15 @@ export function mountSnippetConfigs(context: vscode.ExtensionContext) {
             return snippets;
         }
     };
-    const disposable = vscode.languages.registerCompletionItemProvider('*', provider);
-    context.subscriptions.push(disposable);
+    const languages = await vscode.languages.getLanguages();
+    const selectors = languages.map(language => ({
+        scheme: 'file',
+        language
+    }));
+    const disposables = selectors.map(selector =>
+        vscode.languages.registerCompletionItemProvider(selector, provider)
+    );
+    context.subscriptions.push(...disposables);
 }
 
 enum PlaceHolders {

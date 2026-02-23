@@ -4,10 +4,10 @@ import { updateDataProviderOnCommand } from './services/sidebar';
 import { mountSnippetConfigs, registerBuiltInSnippets } from './services/snippets';
 import { initViews } from './views';
 
-export function activate(context: vscode.ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext) {
     initCommands(context);
     initViews();
-    mountSnippetConfigs(context);
     updateDataProviderOnCommand();
+    await mountSnippetConfigs(context);
     registerBuiltInSnippets(context);
 }
