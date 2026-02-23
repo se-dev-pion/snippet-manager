@@ -13,7 +13,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onView:snippet-manager"
+    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
   "contributes": {
