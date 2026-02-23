@@ -35,27 +35,52 @@ export function mountSnippetConfigs(context: vscode.ExtensionContext) {
 }
 
 enum PlaceHolders {
-    Key = '${1:prefix}',
-    Language = '${2:scope}',
-    Tip = '${3:description}',
-    Content = '${4:body}'
+    Key = '${1:<!-- prefix -->}',
+    Language = '${2:<!-- scope -->}',
+    Tip = '${3:<!-- description -->}',
+    Content = '${4:<!-- body -->}',
+    Name = '${1:<!-- name -->}',
+    Items = '${2:<!-- items -->}'
 }
-const snippetConfigItemSnippet = /*xml*/ `
-  <item>
-    <key>${PlaceHolders.Key}</key>
-    <tip>${PlaceHolders.Tip}</tip>
-    <main language="${PlaceHolders.Language}"><![CDATA[
-      ${PlaceHolders.Content}
-    ]]></main>
-  </item>
-`;
+
+const snippetConfigItemSnippet = /*xml*/ `<item>
+  <key>${PlaceHolders.Key}</key>
+  <tip>${PlaceHolders.Tip}</tip>
+  <main language="${PlaceHolders.Language}"><![CDATA[
+    ${PlaceHolders.Content}
+  ]]></main>
+</item>`;
+
+const snippetConfigFileTemplate = /*xml*/ `<root>
+  <name>${PlaceHolders.Name}</name>
+  ${PlaceHolders.Items}
+</root>`;
+
+const builtInSnippets = [
+    {
+        label: 'item',
+        insertText: snippetConfigItemSnippet,
+        detail: 'Add a snippet config item',
+        kind: vscode.CompletionItemKind.Snippet
+    },
+    {
+        label: 'init',
+        insertText: snippetConfigFileTemplate,
+        detail: 'Init the snippet config file',
+        kind: vscode.CompletionItemKind.File
+    }
+];
+
 export function registerBuiltInSnippets(context: vscode.ExtensionContext) {
     const provider: vscode.CompletionItemProvider = {
         provideCompletionItems(_document, _position, _token, _context) {
-            const snippet = new vscode.CompletionItem('item', vscode.CompletionItemKind.Unit);
-            snippet.insertText = new vscode.SnippetString(snippetConfigItemSnippet);
-            snippet.detail = 'Add a new snippet config item';
-            return [snippet];
+            return builtInSnippets.map(snippet => {
+                const { label, insertText, detail, kind } = snippet;
+                const item = new vscode.CompletionItem(label, kind);
+                item.insertText = new vscode.SnippetString(insertText);
+                item.detail = detail;
+                return item;
+            });
         }
     };
     const disposable = vscode.languages.registerCompletionItemProvider('snippet', provider);
