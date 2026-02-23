@@ -1,0 +1,435 @@
+<root>
+  <name>demo</name>
+  <item>
+    <key>demo</key>
+    <tip>main function template for C</tip>
+    <main language="c"><![CDATA[
+#include <stdio.h>
+
+int main(int argc, char **argv) {
+    printf("Hello, World!\n");
+    return 0;
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main function template for C++</tip>
+    <main language="cpp"><![CDATA[
+#include <iostream>
+
+int main(int argc, char **argv) {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main class template for C#</tip>
+    <main language="csharp"><![CDATA[
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        Console.WriteLine("Hello, World!");
+    }
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main class template for Java</tip>
+    <main language="java"><![CDATA[
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main function template for Kotlin</tip>
+    <main language="kotlin"><![CDATA[
+fun main() {
+    println("Hello, World!")
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main function template for Dart</tip>
+    <main language="dart"><![CDATA[
+void main() {
+  print('Hello, World!');
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main function template for Swift</tip>
+    <main language="swift"><![CDATA[
+print("Hello, World!")
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>console log template for JavaScript</tip>
+    <main language="javascript"><![CDATA[
+console.log("Hello, World!");
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>console log template for TypeScript</tip>
+    <main language="typescript"><![CDATA[
+console.log("Hello, World!");
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>Vue component template</tip>
+    <main language="vue"><![CDATA[
+<template>
+  <div>Hello, World!</div>
+</template>
+
+<script setup lang="ts">
+</script>
+
+<style scoped>
+</style>
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>React component template</tip>
+    <main language="javascriptreact"><![CDATA[
+import React from 'react';
+
+export default function App() {
+  return <div>Hello, World!</div>;
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>React component template with TypeScript</tip>
+    <main language="typescriptreact"><![CDATA[
+import React from 'react';
+
+export default function App() {
+  return <div>Hello, World!</div>;
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>Svelte component template</tip>
+    <main language="svelte"><![CDATA[
+<script lang="ts">
+</script>
+
+<div>Hello, World!</div>
+
+<style>
+</style>
+     ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main function template for Go</tip>
+    <main language="go"><![CDATA[
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo-python</key>
+    <tip>hello world for Python</tip>
+    <main language="python"><![CDATA[
+print('hello world')
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>hello world for Ruby</tip>
+    <main language="ruby"><![CDATA[
+puts "Hello, World!"
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>echo command for Shell</tip>
+    <main language="shellscript"><![CDATA[
+#!/bin/bash
+
+echo "Hello, World!"
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>echo statement for PHP</tip>
+    <main language="php"><![CDATA[
+<?php
+echo "Hello, World!";
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>print statement for Perl</tip>
+    <main language="perl"><![CDATA[
+#!/usr/bin/perl
+print "Hello, World!\n";
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main function template for Rust</tip>
+    <main language="rust"><![CDATA[
+fn main() {
+    println!("Hello, World!");
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>print statement for Lua</tip>
+    <main language="lua"><![CDATA[
+print("Hello, World!")
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>SELECT statement for SQL</tip>
+    <main language="sql"><![CDATA[
+SELECT * FROM users WHERE id = 1;
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main function template for Odin</tip>
+    <main language="odin"><![CDATA[
+package main
+
+import "core:fmt"
+
+main :: proc() {
+    fmt.println("Hello, World!")
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main function template for Zig</tip>
+    <main language="zig"><![CDATA[
+const std = @import("std");
+
+pub fn main() !void {
+    std.debug.print("Hello, World!\n", .{});
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main function template for D</tip>
+    <main language="d"><![CDATA[
+import std.stdio;
+
+void main() {
+    writeln("Hello, World!");
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main function template for V</tip>
+    <main language="v"><![CDATA[
+module main
+
+fn main() {
+    println('Hello, World!')
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>main object template for Scala</tip>
+    <main language="scala"><![CDATA[
+object Main {
+    def main(args: Array[String]): Unit = {
+        println("Hello, World!")
+    }
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>println statement for Groovy</tip>
+    <main language="groovy"><![CDATA[
+println "Hello, World!"
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>printfn statement for F#</tip>
+    <main language="fsharp"><![CDATA[
+printfn "Hello, World!"
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>echo statement for Nim</tip>
+    <main language="nim"><![CDATA[
+echo "Hello, World!"
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>class selector for SCSS</tip>
+    <main language="scss"><![CDATA[
+.container {
+    display: flex;
+    justify-content: center;
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>class selector for Sass</tip>
+    <main language="sass"><![CDATA[
+.container
+    display: flex
+    justify-content: center
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>class selector for Less</tip>
+    <main language="less"><![CDATA[
+.container {
+    display: flex;
+    justify-content: center;
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>class selector for Stylus</tip>
+    <main language="stylus"><![CDATA[
+.container
+    display flex
+    justify-content center
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>object example for JSON</tip>
+    <main language="json"><![CDATA[
+{
+    "name": "demo",
+    "version": "1.0.0"
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>object example for YAML</tip>
+    <main language="yaml"><![CDATA[
+name: demo
+version: 1.0.0
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>key-value example for TOML</tip>
+    <main language="toml"><![CDATA[
+name = "demo"
+version = "1.0.0"
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>root element for XML</tip>
+    <main language="xml"><![CDATA[
+<root>
+    <item>value</item>
+</root>
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>message definition for Protobuf</tip>
+    <main language="protobuf"><![CDATA[
+syntax = "proto3";
+
+message User {
+    string name = 1;
+    int32 age = 2;
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>query example for GraphQL</tip>
+    <main language="graphql"><![CDATA[
+query GetUser($id: ID!) {
+    user(id: $id) {
+        name
+        email
+    }
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>API service example for goctl</tip>
+    <main language="goctl"><![CDATA[
+type Request {
+    Name string `json:"name"`
+}
+
+type Response {
+    Message string `json:"message"`
+}
+
+service Demo {
+    @handler demo
+    post /demo (Request) returns (Response)
+}
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>HTML document template</tip>
+    <main language="html"><![CDATA[
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+</body>
+</html>
+    ]]></main>
+  </item>
+  <item>
+    <key>demo</key>
+    <tip>Dockerfile template</tip>
+    <main language="dockerfile"><![CDATA[
+FROM alpine:latest
+
+RUN echo "Hello, World!"
+
+CMD ["/bin/sh"]
+    ]]></main>
+  </item>
+</root>
