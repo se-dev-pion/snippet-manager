@@ -22,7 +22,7 @@ importers:
         specifier: 22.x
         version: 22.19.11
       '@types/vscode':
-        specifier: ^1.109.0
+        specifier: ^1.100.0
         version: 1.109.0
       '@vscode/test-cli':
         specifier: ^0.0.12
