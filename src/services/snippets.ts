@@ -1,6 +1,7 @@
 import vscode from 'vscode';
 import { loadedConfigsDataProvider } from '../logics/config';
-import { loadSnippetConfig } from '../logics/parse';
+import { loadSnippetConfig } from '../logics/parser';
+import { buildCompletionItem } from '../logics/snippets';
 
 export async function mountSnippetConfigs(context: vscode.ExtensionContext) {
     const provider: vscode.CompletionItemProvider = {
@@ -12,16 +13,10 @@ export async function mountSnippetConfigs(context: vscode.ExtensionContext) {
                     const rawItem = data.root.item ?? [];
                     const items = rawItem instanceof Array ? rawItem : [rawItem];
                     for (const config of items) {
-                        if (![document.languageId, '*'].includes(config.main['@_language'])) {
-                            continue;
+                        const snippet = buildCompletionItem(config, document.languageId);
+                        if (snippet) {
+                            snippets.push(snippet);
                         }
-                        const snippet = new vscode.CompletionItem(
-                            config.key,
-                            vscode.CompletionItemKind.Snippet
-                        );
-                        snippet.insertText = new vscode.SnippetString(config.main['#text'].trim());
-                        snippet.detail = config.tip;
-                        snippets.push(snippet);
                     }
                 } catch (err) {
                     console.log((err as Error).message);

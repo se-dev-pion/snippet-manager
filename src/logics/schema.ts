@@ -1,6 +1,6 @@
 import z from 'zod';
 
-export const snippetConfigItemSchema = z.object({
+const snippetConfigItemSchema = z.object({
     key: z.string(),
     tip: z.string(),
     main: z.object({
@@ -8,6 +8,8 @@ export const snippetConfigItemSchema = z.object({
         '#text': z.string()
     })
 });
+
+export type SnippetConfigItem = z.infer<typeof snippetConfigItemSchema>;
 
 export const snippetConfigSchema = z.object({
     root: z.object({
