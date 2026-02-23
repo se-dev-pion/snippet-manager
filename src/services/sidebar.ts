@@ -1,8 +1,9 @@
 import vscode from 'vscode';
 import { LoadConfigCommand } from '../commands/loadConfig';
 import { LoadedConfigsTreeView } from '../views/loadedConfigs';
-import { loadedConfigsDataProvider, loadSnippetConfig, SnippetConfigItem } from '../logics/config';
+import { loadedConfigsDataProvider, SnippetConfigItem } from '../logics/config';
 import { UnloadConfigCommand } from '../commands/unloadConfig';
+import { loadSnippetConfig } from '../logics/parse';
 
 export function provideTreeView() {
     const treeView = new LoadedConfigsTreeView();

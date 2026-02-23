@@ -1,8 +1,6 @@
 import vscode from 'vscode';
 import { configKey } from '../common/constants';
 import { ObservableTreeDataProviderTemplate } from './common/templates';
-import { xmlParser } from '../common/utils';
-import { snippetConfigSchema } from './schema';
 
 export class SnippetConfigItem extends vscode.TreeItem {
     public constructor(
@@ -41,13 +39,3 @@ class LoadedConfigsDataProvider extends ObservableTreeDataProviderTemplate<Snipp
 }
 
 export const loadedConfigsDataProvider = new LoadedConfigsDataProvider();
-
-export async function loadSnippetConfig(file: vscode.Uri) {
-    const content = await vscode.workspace.fs.readFile(file);
-    const result = xmlParser.parse(content);
-    const { success, error, data } = snippetConfigSchema.safeParse(result);
-    if (!success) {
-        throw error;
-    }
-    return data;
-}
