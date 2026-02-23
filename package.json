@@ -73,8 +73,8 @@
           ".snippet.xml"
         ],
         "icon": {
-          "light": "./assets/file.png",
-          "dark": "./assets/file.png"
+          "light": "./assets/light.png",
+          "dark": "./assets/dark.png"
         }
       }
     ],
