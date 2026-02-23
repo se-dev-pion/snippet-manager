@@ -9,7 +9,9 @@ export function mountSnippetConfigs(context: vscode.ExtensionContext) {
             for (const item of loadedConfigsDataProvider.getChildren()) {
                 try {
                     const data = await loadSnippetConfig(item.resourceUri);
-                    for (const config of data.root.item) {
+                    const rawItem = data.root.item ?? [];
+                    const items = rawItem instanceof Array ? rawItem : [rawItem];
+                    for (const config of items) {
                         if (![document.languageId, '*'].includes(config.main['@_language'])) {
                             continue;
                         }

@@ -12,6 +12,6 @@ export const snippetConfigItemSchema = z.object({
 export const snippetConfigSchema = z.object({
     root: z.object({
         name: z.string(),
-        item: z.array(snippetConfigItemSchema)
+        item: z.union([snippetConfigItemSchema, z.array(snippetConfigItemSchema)]).optional()
     })
 });
