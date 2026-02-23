@@ -2,7 +2,7 @@
     "scopeName": "source.snippet",
     "patterns": [
         {
-            "begin": "<(main) (scope)=(\")(c)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(c)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.c",
             "beginCaptures": {
@@ -46,7 +46,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(cpp)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(cpp)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.cpp",
             "beginCaptures": {
@@ -90,7 +90,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(csharp)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(csharp)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.csharp",
             "beginCaptures": {
@@ -134,7 +134,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(java)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(java)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.java",
             "beginCaptures": {
@@ -178,7 +178,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(kotlin)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(kotlin)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.kotlin",
             "beginCaptures": {
@@ -222,7 +222,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(dart)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(dart)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.dart",
             "beginCaptures": {
@@ -266,7 +266,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(swift)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(swift)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.swift",
             "beginCaptures": {
@@ -310,7 +310,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(javascript)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(javascript)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.javascript",
             "beginCaptures": {
@@ -354,7 +354,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(typescript)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(typescript)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.typescript",
             "beginCaptures": {
@@ -398,7 +398,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(vue)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(vue)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.vue",
             "beginCaptures": {
@@ -442,7 +442,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(javascriptreact)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(javascriptreact)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.javascriptreact",
             "beginCaptures": {
@@ -486,7 +486,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(typescriptreact)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(typescriptreact)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.typescriptreact",
             "beginCaptures": {
@@ -530,7 +530,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(svelte)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(svelte)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.svelte",
             "beginCaptures": {
@@ -574,7 +574,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(go)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(go)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.go",
             "beginCaptures": {
@@ -618,7 +618,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(python)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(python)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.python",
             "beginCaptures": {
@@ -662,7 +662,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(ruby)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(ruby)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.ruby",
             "beginCaptures": {
@@ -706,7 +706,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(shellscript)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(shellscript)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.shellscript",
             "beginCaptures": {
@@ -750,7 +750,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(php)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(php)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.php",
             "beginCaptures": {
@@ -794,7 +794,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(perl)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(perl)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.perl",
             "beginCaptures": {
@@ -838,7 +838,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(rust)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(rust)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.rust",
             "beginCaptures": {
@@ -882,7 +882,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(lua)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(lua)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.lua",
             "beginCaptures": {
@@ -926,7 +926,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(sql)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(sql)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.sql",
             "beginCaptures": {
@@ -970,7 +970,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(odin)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(odin)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.odin",
             "beginCaptures": {
@@ -1014,7 +1014,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(zig)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(zig)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.zig",
             "beginCaptures": {
@@ -1058,7 +1058,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(d)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(d)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.d",
             "beginCaptures": {
@@ -1102,7 +1102,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(v)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(v)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.v",
             "beginCaptures": {
@@ -1146,7 +1146,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(scala)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(scala)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.scala",
             "beginCaptures": {
@@ -1190,7 +1190,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(groovy)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(groovy)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.groovy",
             "beginCaptures": {
@@ -1234,7 +1234,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(fsharp)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(fsharp)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.fsharp",
             "beginCaptures": {
@@ -1278,7 +1278,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(nim)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(nim)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.nim",
             "beginCaptures": {
@@ -1322,7 +1322,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(scss)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(scss)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.scss",
             "beginCaptures": {
@@ -1366,7 +1366,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(sass)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(sass)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.sass",
             "beginCaptures": {
@@ -1410,7 +1410,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(less)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(less)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.less",
             "beginCaptures": {
@@ -1454,7 +1454,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(stylus)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(stylus)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.stylus",
             "beginCaptures": {
@@ -1498,7 +1498,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(json)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(json)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.json",
             "beginCaptures": {
@@ -1542,7 +1542,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(yaml)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(yaml)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.yaml",
             "beginCaptures": {
@@ -1586,7 +1586,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(toml)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(toml)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.toml",
             "beginCaptures": {
@@ -1630,7 +1630,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(xml)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(xml)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.xml",
             "beginCaptures": {
@@ -1674,7 +1674,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(protobuf)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(protobuf)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.protobuf",
             "beginCaptures": {
@@ -1718,7 +1718,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(graphql)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(graphql)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.graphql",
             "beginCaptures": {
@@ -1762,7 +1762,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(goctl)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(goctl)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.goctl",
             "beginCaptures": {
@@ -1806,7 +1806,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(html)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(html)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.html",
             "beginCaptures": {
@@ -1850,7 +1850,7 @@
             ]
         },
         {
-            "begin": "<(main) (scope)=(\")(dockerfile)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(dockerfile)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
             "name": "meta.embedded.block.dockerfile",
             "beginCaptures": {
