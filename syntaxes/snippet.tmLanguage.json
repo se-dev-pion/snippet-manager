@@ -437,7 +437,7 @@
             },
             "patterns": [
                 {
-                    "include": "source.vue"
+                    "include": "text.html.vue"
                 }
             ]
         },
@@ -481,7 +481,7 @@
             },
             "patterns": [
                 {
-                    "include": "source.jsx"
+                    "include": "source.js.jsx"
                 }
             ]
         },
@@ -526,50 +526,6 @@
             "patterns": [
                 {
                     "include": "source.tsx"
-                }
-            ]
-        },
-        {
-            "begin": "<(main) (language)=(\")(svelte)(\")>(<!\\[CDATA\\[)",
-            "end": "(\\]\\]>)</(main)>",
-            "name": "meta.embedded.block.svelte",
-            "beginCaptures": {
-                "0": {
-                    "name": "meta.tag.xml"
-                },
-                "1": {
-                    "name": "entity.name.tag.localname.xml"
-                },
-                "2": {
-                    "name": "entity.other.attribute-name.localname.xml"
-                },
-                "3": {
-                    "name": "string.quoted"
-                },
-                "4": {
-                    "name": "entity.other.attribute-name.localname.xml"
-                },
-                "5": {
-                    "name": "string.quoted"
-                },
-                "6": {
-                    "name": "comment.block.xml"
-                }
-            },
-            "endCaptures": {
-                "0": {
-                    "name": "meta.tag.xml"
-                },
-                "1": {
-                    "name": "comment.block.xml"
-                },
-                "2": {
-                    "name": "entity.name.tag.localname.xml"
-                }
-            },
-            "patterns": [
-                {
-                    "include": "source.svelte"
                 }
             ]
         },
@@ -1273,7 +1229,7 @@
             },
             "patterns": [
                 {
-                    "include": "source.fsharp"
+                    "include": "source.fsharp.fsl"
                 }
             ]
         },
@@ -1454,9 +1410,9 @@
             ]
         },
         {
-            "begin": "<(main) (language)=(\")(stylus)(\")>(<!\\[CDATA\\[)",
+            "begin": "<(main) (language)=(\")(css)(\")>(<!\\[CDATA\\[)",
             "end": "(\\]\\]>)</(main)>",
-            "name": "meta.embedded.block.stylus",
+            "name": "meta.embedded.block.css",
             "beginCaptures": {
                 "0": {
                     "name": "meta.tag.xml"
@@ -1493,7 +1449,7 @@
             },
             "patterns": [
                 {
-                    "include": "source.stylus"
+                    "include": "source.css"
                 }
             ]
         },
