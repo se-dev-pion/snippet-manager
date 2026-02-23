@@ -1,11 +1,13 @@
 import * as vscode from 'vscode';
 import { initCommands } from './commands';
-import { provideTreeView } from './services/sidebar';
+import { updateDataProviderOnCommand } from './services/sidebar';
 import { mountSnippetConfigs, registerBuiltInSnippets } from './services/snippets';
+import { initViews } from './views';
 
 export function activate(context: vscode.ExtensionContext) {
     initCommands(context);
+    initViews();
     mountSnippetConfigs(context);
-    provideTreeView();
+    updateDataProviderOnCommand();
     registerBuiltInSnippets(context);
 }

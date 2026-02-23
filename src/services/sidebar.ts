@@ -1,12 +1,10 @@
 import vscode from 'vscode';
 import { LoadConfigCommand } from '../commands/loadConfig';
-import { LoadedConfigsTreeView } from '../views/loadedConfigs';
 import { loadedConfigsDataProvider, SnippetConfigItem } from '../logics/config';
 import { UnloadConfigCommand } from '../commands/unloadConfig';
 import { loadSnippetConfig } from '../logics/parse';
 
-export function provideTreeView() {
-    const treeView = new LoadedConfigsTreeView();
+export function updateDataProviderOnCommand() {
     LoadConfigCommand.addCallback(async (file: vscode.Uri) => {
         try {
             const data = await loadSnippetConfig(file);
@@ -19,5 +17,4 @@ export function provideTreeView() {
     UnloadConfigCommand.addCallback((id: string) => {
         loadedConfigsDataProvider.delete(id);
     });
-    treeView.register(loadedConfigsDataProvider);
 }
