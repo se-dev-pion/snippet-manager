@@ -17,7 +17,7 @@ export class LoadConfigCommand extends CommandTemplate {
                 canSelectFolders: false,
                 canSelectMany: false,
                 filters: {
-                    'Snippet Configs': ['xml']
+                    'Snippet Configs': ['snippet.xml']
                 }
             })
         )?.at(0);
