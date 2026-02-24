@@ -2,6 +2,11 @@ import vscode from 'vscode';
 import { configKey } from '../common/constants';
 import { ObservableTreeDataProviderTemplate } from './common/templates';
 
+type SnippetConfigItemData = {
+    label: string;
+    resourceUri: string;
+};
+
 export class SnippetConfigItem extends vscode.TreeItem {
     public constructor(
         public readonly label: string,
@@ -16,6 +21,15 @@ export class SnippetConfigItem extends vscode.TreeItem {
             arguments: [resourceUri]
         };
     }
+    public toJSON(): SnippetConfigItemData {
+        return {
+            label: this.label,
+            resourceUri: this.resourceUri.toString()
+        };
+    }
+    public static fromJSON(data: SnippetConfigItemData) {
+        return new SnippetConfigItem(data.label, vscode.Uri.parse(data.resourceUri));
+    }
 }
 
 class LoadedConfigsDataProvider extends ObservableTreeDataProviderTemplate<SnippetConfigItem> {
@@ -28,13 +42,31 @@ class LoadedConfigsDataProvider extends ObservableTreeDataProviderTemplate<Snipp
     override getChildren() {
         return Object.values(this.data);
     }
-    public add(item: SnippetConfigItem) {
+    public add(context: vscode.ExtensionContext, item: SnippetConfigItem) {
         this.data[item.label] = item;
         this.refresh();
+        this.persist(context);
     }
-    public delete(label: string) {
+    public delete(context: vscode.ExtensionContext, label: string) {
         delete this.data[label];
         this.refresh();
+        this.persist(context);
+    }
+    public load(data: string) {
+        if (data.length === 0) {
+            return;
+        }
+        this.data = Object.fromEntries(
+            Object.entries(JSON.parse(data) as Record<string, SnippetConfigItemData>).map(
+                (value: [string, SnippetConfigItemData]) => {
+                    return [value[0], SnippetConfigItem.fromJSON(value[1])];
+                }
+            )
+        );
+        this.refresh();
+    }
+    private persist(context: vscode.ExtensionContext) {
+        context.globalState.update(context.extension.id, JSON.stringify(this.data));
     }
 }
 
