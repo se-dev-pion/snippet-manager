@@ -82,51 +82,14 @@
       {
         "language": "snippet",
         "scopeName": "source.snippet",
-        "path": "./syntaxes/snippet.tmLanguage.json",
-        "embeddedLanguages": {
-          "meta.embedded.block.c": "c",
-          "meta.embedded.block.cpp": "cpp",
-          "meta.embedded.block.csharp": "csharp",
-          "meta.embedded.block.java": "java",
-          "meta.embedded.block.kotlin": "kotlin",
-          "meta.embedded.block.dart": "dart",
-          "meta.embedded.block.swift": "swift",
-          "meta.embedded.block.javascript": "javascript",
-          "meta.embedded.block.typescript": "typescript",
-          "meta.embedded.block.vue": "vue",
-          "meta.embedded.block.javascriptreact": "javascriptreact",
-          "meta.embedded.block.typescriptreact": "typescriptreact",
-          "meta.embedded.block.go": "go",
-          "meta.embedded.block.python": "python",
-          "meta.embedded.block.ruby": "ruby",
-          "meta.embedded.block.shellscript": "shellscript",
-          "meta.embedded.block.php": "php",
-          "meta.embedded.block.perl": "perl",
-          "meta.embedded.block.rust": "rust",
-          "meta.embedded.block.lua": "lua",
-          "meta.embedded.block.sql": "sql",
-          "meta.embedded.block.odin": "odin",
-          "meta.embedded.block.zig": "zig",
-          "meta.embedded.block.d": "d",
-          "meta.embedded.block.v": "v",
-          "meta.embedded.block.scala": "scala",
-          "meta.embedded.block.groovy": "groovy",
-          "meta.embedded.block.fsharp": "fsharp",
-          "meta.embedded.block.nim": "nim",
-          "meta.embedded.block.scss": "scss",
-          "meta.embedded.block.sass": "sass",
-          "meta.embedded.block.less": "less",
-          "meta.embedded.block.css": "css",
-          "meta.embedded.block.json": "json",
-          "meta.embedded.block.yaml": "yaml",
-          "meta.embedded.block.toml": "toml",
-          "meta.embedded.block.xml": "xml",
-          "meta.embedded.block.protobuf": "protobuf",
-          "meta.embedded.block.graphql": "graphql",
-          "meta.embedded.block.api": "goctl",
-          "meta.embedded.block.html": "html",
-          "meta.embedded.block.dockerfile": "dockerfile"
-        }
+        "path": "./syntaxes/snippet.tmLanguage.json"
+      },
+      {
+        "scopeName": "snippet.injection",
+        "path": "./syntaxes/embed.tmLanguage.json",
+        "injectTo": [
+          "source.snippet"
+        ]
       }
     ]
   },
