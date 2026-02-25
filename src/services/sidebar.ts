@@ -8,7 +8,7 @@ export function updateDataProviderOnCommand(context: vscode.ExtensionContext) {
     LoadConfigCommand.addCallback(async (file: vscode.Uri) => {
         try {
             const data = await loadSnippetConfig(file);
-            const item = new SnippetConfigItem(data.root.name, file);
+            const item = new SnippetConfigItem(context, data);
             loadedConfigsDataProvider.add(context, item);
         } catch (err) {
             vscode.window.showErrorMessage((err as Error).message);

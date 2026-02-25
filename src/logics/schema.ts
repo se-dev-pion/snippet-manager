@@ -17,3 +17,5 @@ export const snippetConfigSchema = z.object({
         item: z.union([snippetConfigItemSchema, z.array(snippetConfigItemSchema)]).optional()
     })
 });
+
+export type SnippetConfig = z.infer<typeof snippetConfigSchema>;
