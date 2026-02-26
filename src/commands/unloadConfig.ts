@@ -1,3 +1,4 @@
+import { UUID } from 'crypto';
 import { CommandID } from '../common/enums';
 import { SnippetConfigItem } from '../logics/config';
 import { Command } from './common/interfaces';
@@ -10,10 +11,10 @@ export class UnloadConfigCommand extends CommandTemplate {
     }
     override id = CommandID.UnloadConfig;
     override call(item: SnippetConfigItem) {
-        UnloadConfigCommand._callbacks.map(f => f(item.label));
+        UnloadConfigCommand._callbacks.map(f => f(item.id));
     }
-    private static _callbacks = new Array<(id: string) => void>();
-    public static addCallback(f: (id: string) => void) {
+    private static _callbacks = new Array<(id: UUID) => void>();
+    public static addCallback(f: (id: UUID) => void) {
         UnloadConfigCommand._callbacks.push(f);
     }
 }

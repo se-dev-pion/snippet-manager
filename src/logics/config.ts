@@ -1,23 +1,30 @@
 import vscode from 'vscode';
-import { configKey } from '../common/constants';
+import { configKey, maxSnippetConfigCountLimit } from '../common/constants';
 import { ObservableTreeDataProviderTemplate } from './common/templates';
 import { extensionConfigState, snippetConfigState } from './state';
 import { SnippetConfig } from './schema';
+import { randomUUID, UUID } from 'crypto';
 
 export class SnippetConfigItem extends vscode.TreeItem {
     public constructor(
         _context: vscode.ExtensionContext, // for open and edit config
         public readonly data: SnippetConfig,
-        public readonly label: string = data.root.name
+        public readonly label: string = data.root.name,
+        public readonly id = randomUUID()
     ) {
         super(label, vscode.TreeItemCollapsibleState.None);
+        this.description = id;
         this.contextValue = `${configKey}.config-item`;
         // TODO implement editing view
     }
 }
 
 class LoadedConfigsDataProvider extends ObservableTreeDataProviderTemplate<SnippetConfigItem> {
-    public constructor(private data = {} as Record<string, SnippetConfigItem>) {
+    public constructor(
+        private data = {} as Record<UUID, SnippetConfigItem>,
+        private orders = {} as Record<UUID, number>,
+        private loaded = false
+    ) {
         super();
     }
     override getTreeItem(element: SnippetConfigItem) {
@@ -27,44 +34,40 @@ class LoadedConfigsDataProvider extends ObservableTreeDataProviderTemplate<Snipp
         return Object.values(this.data);
     }
     public add(context: vscode.ExtensionContext, item: SnippetConfigItem) {
-        this.data[item.label] = item;
+        const order = Object.keys(this.data).length;
+        if (order === maxSnippetConfigCountLimit) {
+            vscode.window.showErrorMessage(
+                `Snippet configs can only be up to ${maxSnippetConfigCountLimit} !`
+            );
+            return;
+        }
+        this.data[item.id] = item;
+        this.orders[item.id] = order;
         this.refresh();
-        this.persist(context, item.label, false);
-        this.sync(context);
+        extensionConfigState.set(context, this.orders);
+        snippetConfigState.set(context, order, item.data);
     }
-    public delete(context: vscode.ExtensionContext, label: string) {
-        delete this.data[label];
+    public delete(context: vscode.ExtensionContext, id: UUID) {
+        delete this.data[id];
+        const order = this.orders[id];
+        delete this.orders[id];
         this.refresh();
-        this.persist(context, label, true);
+        extensionConfigState.set(context, this.orders);
+        snippetConfigState.del(context, order ?? maxSnippetConfigCountLimit); // handle if order is `undefined`
     }
     public load(context: vscode.ExtensionContext) {
-        const labels = extensionConfigState.get(context);
-        const data = labels.map(label => snippetConfigState.get(context, label));
-        this.data = Object.fromEntries(
-            Object.entries(data).map((value: [string, SnippetConfig]) => [
-                value[0],
-                new SnippetConfigItem(context, value[1])
-            ])
-        );
-        this.refresh();
-        this.sync(context);
-    }
-    private persist(context: vscode.ExtensionContext, label: string, forDelete: boolean) {
-        extensionConfigState.set(context, Object.keys(this.data));
-        if (forDelete) {
-            snippetConfigState.del(context, label);
-        } else {
-            snippetConfigState.set(context, label, this.data[label].data);
+        if (this.loaded) {
+            return;
         }
-    }
-    private sync(context: vscode.ExtensionContext) {
-        const extensionConfigStateKey = extensionConfigState.key(context);
-        const snippetConfigStateKeys = Object.keys(this.data).map(key =>
-            snippetConfigState.key(context, key)
-        );
-        context.globalState.setKeysForSync(
-            [extensionConfigStateKey].concat(snippetConfigStateKeys)
-        );
+        this.orders = extensionConfigState.get(context);
+        for (const [id, order] of Object.entries(this.orders)) {
+            this.data[id as UUID] = new SnippetConfigItem(
+                context,
+                snippetConfigState.get(context, order)
+            );
+        }
+        this.refresh();
+        this.loaded = true;
     }
 }
 

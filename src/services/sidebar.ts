@@ -3,6 +3,7 @@ import { LoadConfigCommand } from '../commands/loadConfig';
 import { loadedConfigsDataProvider, SnippetConfigItem } from '../logics/config';
 import { UnloadConfigCommand } from '../commands/unloadConfig';
 import { loadSnippetConfig } from '../logics/parser';
+import { randomUUID, UUID } from 'crypto';
 
 export function updateDataProviderOnCommand(context: vscode.ExtensionContext) {
     LoadConfigCommand.addCallback(async (file: vscode.Uri) => {
@@ -14,7 +15,7 @@ export function updateDataProviderOnCommand(context: vscode.ExtensionContext) {
             vscode.window.showErrorMessage((err as Error).message);
         }
     });
-    UnloadConfigCommand.addCallback((id: string) => {
+    UnloadConfigCommand.addCallback((id: UUID) => {
         loadedConfigsDataProvider.delete(context, id);
     });
 }
