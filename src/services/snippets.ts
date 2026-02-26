@@ -35,20 +35,20 @@ export async function mountSnippetConfigs(context: vscode.ExtensionContext) {
 }
 
 enum PlaceHolders {
-    Key = '${1:<!-- prefix -->}',
-    Language = '${2:<!-- scope -->}',
-    Tip = '${3:<!-- description -->}',
-    Content = '${4:<!-- body -->}',
-    Name = '${1:<!-- name -->}',
-    Items = '${2:<!-- items -->}'
+    Prefix = '${1:<!-- prefix for auto completion -->}',
+    Scope = '${2:<!-- languageId -->}',
+    Description = '${3:<!-- description -->}',
+    Body = '${4:<!-- snippet content -->}',
+    Name = '${1:<!-- config name -->}',
+    Items = '${2:<!-- snippet items -->}'
 }
 
 const snippetConfigItemSnippet = /*xml*/ `<item>
-  <key>${PlaceHolders.Key}</key>
-  <tip>${PlaceHolders.Tip}</tip>
-  <main language="${PlaceHolders.Language}"><![CDATA[
-    ${PlaceHolders.Content}
-  ]]></main>
+  <prefix>${PlaceHolders.Prefix}</prefix>
+  <description>${PlaceHolders.Description}</description>
+  <body scope="${PlaceHolders.Scope}"><![CDATA[
+    ${PlaceHolders.Body}
+  ]]></body>
 </item>`;
 
 const snippetConfigFileTemplate = /*xml*/ `<root>

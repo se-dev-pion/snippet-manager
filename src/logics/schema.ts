@@ -1,10 +1,10 @@
 import z from 'zod';
 
 const snippetConfigItemSchema = z.object({
-    key: z.string(),
-    tip: z.string(),
-    main: z.object({
-        '@_language': z.string(),
+    prefix: z.string(),
+    description: z.string(),
+    body: z.object({
+        '@_scope': z.string(),
         '#text': z.string()
     })
 });

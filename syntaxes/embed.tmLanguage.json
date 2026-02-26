@@ -3,8 +3,8 @@
   "scopeName": "snippet.injection",
   "patterns": [
     {
-      "begin": "<(main) (language)=(\")(c)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(c)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.c",
       "beginCaptures": {
         "0": {
@@ -47,8 +47,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(cpp)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(cpp)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.cpp",
       "beginCaptures": {
         "0": {
@@ -91,8 +91,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(csharp)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(csharp)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.csharp",
       "beginCaptures": {
         "0": {
@@ -135,8 +135,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(java)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(java)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.java",
       "beginCaptures": {
         "0": {
@@ -179,8 +179,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(kotlin)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(kotlin)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.kotlin",
       "beginCaptures": {
         "0": {
@@ -223,8 +223,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(dart)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(dart)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.dart",
       "beginCaptures": {
         "0": {
@@ -267,8 +267,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(swift)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(swift)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.swift",
       "beginCaptures": {
         "0": {
@@ -311,8 +311,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(javascript)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(javascript)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.javascript",
       "beginCaptures": {
         "0": {
@@ -355,8 +355,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(typescript)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(typescript)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.typescript",
       "beginCaptures": {
         "0": {
@@ -399,8 +399,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(vue)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(vue)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.vue",
       "beginCaptures": {
         "0": {
@@ -443,8 +443,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(javascriptreact)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(javascriptreact)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.javascriptreact",
       "beginCaptures": {
         "0": {
@@ -487,8 +487,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(typescriptreact)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(typescriptreact)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.typescriptreact",
       "beginCaptures": {
         "0": {
@@ -531,8 +531,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(go)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(go)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.go",
       "beginCaptures": {
         "0": {
@@ -575,8 +575,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(python)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(python)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.python",
       "beginCaptures": {
         "0": {
@@ -619,8 +619,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(ruby)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(ruby)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.ruby",
       "beginCaptures": {
         "0": {
@@ -663,8 +663,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(shellscript)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(shellscript)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.shellscript",
       "beginCaptures": {
         "0": {
@@ -707,8 +707,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(php)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(php)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.php",
       "beginCaptures": {
         "0": {
@@ -751,8 +751,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(perl)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(perl)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.perl",
       "beginCaptures": {
         "0": {
@@ -795,8 +795,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(rust)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(rust)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.rust",
       "beginCaptures": {
         "0": {
@@ -839,8 +839,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(lua)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(lua)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.lua",
       "beginCaptures": {
         "0": {
@@ -883,8 +883,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(sql)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(sql)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.sql",
       "beginCaptures": {
         "0": {
@@ -927,8 +927,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(odin)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(odin)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.odin",
       "beginCaptures": {
         "0": {
@@ -971,8 +971,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(zig)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(zig)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.zig",
       "beginCaptures": {
         "0": {
@@ -1015,8 +1015,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(d)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(d)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.d",
       "beginCaptures": {
         "0": {
@@ -1059,8 +1059,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(v)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(v)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.v",
       "beginCaptures": {
         "0": {
@@ -1103,8 +1103,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(scala)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(scala)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.scala",
       "beginCaptures": {
         "0": {
@@ -1147,8 +1147,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(groovy)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(groovy)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.groovy",
       "beginCaptures": {
         "0": {
@@ -1191,8 +1191,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(fsharp)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(fsharp)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.fsharp",
       "beginCaptures": {
         "0": {
@@ -1235,8 +1235,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(nim)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(nim)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.nim",
       "beginCaptures": {
         "0": {
@@ -1279,8 +1279,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(scss)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(scss)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.scss",
       "beginCaptures": {
         "0": {
@@ -1323,8 +1323,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(sass)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(sass)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.sass",
       "beginCaptures": {
         "0": {
@@ -1367,8 +1367,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(less)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(less)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.less",
       "beginCaptures": {
         "0": {
@@ -1411,8 +1411,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(css)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(css)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.css",
       "beginCaptures": {
         "0": {
@@ -1455,8 +1455,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(json)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(json)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.json",
       "beginCaptures": {
         "0": {
@@ -1499,8 +1499,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(yaml)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(yaml)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.yaml",
       "beginCaptures": {
         "0": {
@@ -1543,8 +1543,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(toml)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(toml)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.toml",
       "beginCaptures": {
         "0": {
@@ -1587,8 +1587,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(xml)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(xml)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.xml",
       "beginCaptures": {
         "0": {
@@ -1631,8 +1631,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(protobuf)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(protobuf)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.protobuf",
       "beginCaptures": {
         "0": {
@@ -1675,8 +1675,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(graphql)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(graphql)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.graphql",
       "beginCaptures": {
         "0": {
@@ -1719,8 +1719,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(goctl)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(goctl)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.goctl",
       "beginCaptures": {
         "0": {
@@ -1763,8 +1763,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(html)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(html)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.html",
       "beginCaptures": {
         "0": {
@@ -1807,8 +1807,8 @@
       ]
     },
     {
-      "begin": "<(main) (language)=(\")(dockerfile)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
+      "begin": "<(body) (scope)=(\")(dockerfile)(\")>(<!\\[CDATA\\[)",
+      "end": "(\\]\\]>)</(body)>",
       "name": "meta.embedded.block.dockerfile",
       "beginCaptures": {
         "0": {

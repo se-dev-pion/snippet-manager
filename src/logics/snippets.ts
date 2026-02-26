@@ -2,11 +2,11 @@ import vscode from 'vscode';
 import { SnippetConfigItem } from './schema';
 
 export function buildCompletionItem(config: SnippetConfigItem, language: string) {
-    if (![language, '*'].includes(config.main['@_language'])) {
+    if (![language, '*'].includes(config.body['@_scope'])) {
         return;
     }
-    const snippet = new vscode.CompletionItem(config.key, vscode.CompletionItemKind.Snippet);
-    const rawText = config.main['#text'].trimEnd().split('\n');
+    const snippet = new vscode.CompletionItem(config.prefix, vscode.CompletionItemKind.Snippet);
+    const rawText = config.body['#text'].trimEnd().split('\n');
     while (rawText.length > 0 && !rawText[0]) {
         rawText.shift();
     }
@@ -23,6 +23,6 @@ export function buildCompletionItem(config: SnippetConfigItem, language: string)
         })
         .join('\n');
     snippet.insertText = new vscode.SnippetString(text);
-    snippet.detail = config.tip;
+    snippet.detail = config.description;
     return snippet;
 }
