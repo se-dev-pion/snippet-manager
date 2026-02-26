@@ -22,13 +22,7 @@ export const snippetConfigState = {
         return context.globalState.update(this.key(context, key), value);
     },
     get(context: vscode.ExtensionContext, key: number) {
-        return (
-            context.globalState.get<SnippetConfig>(this.key(context, key)) ?? {
-                root: {
-                    name: ''
-                }
-            }
-        );
+        return context.globalState.get<SnippetConfig>(this.key(context, key));
     },
     del(context: vscode.ExtensionContext, key: number) {
         return context.globalState.update(this.key(context, key), undefined);

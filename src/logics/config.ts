@@ -3,14 +3,14 @@ import { configKey, maxSnippetConfigCountLimit } from '../common/constants';
 import { ObservableTreeDataProviderTemplate } from './common/templates';
 import { extensionConfigState, snippetConfigState } from './state';
 import { SnippetConfig } from './schema';
-import { randomUUID, UUID } from 'crypto';
+import { UUID } from 'crypto';
 
 export class SnippetConfigItem extends vscode.TreeItem {
     public constructor(
         _context: vscode.ExtensionContext, // for open and edit config
+        public readonly id: UUID,
         public readonly data: SnippetConfig,
-        public readonly label: string = data.root.name,
-        public readonly id = randomUUID()
+        public readonly label: string = data.root.name
     ) {
         super(label, vscode.TreeItemCollapsibleState.None);
         this.description = id;
@@ -60,11 +60,12 @@ class LoadedConfigsDataProvider extends ObservableTreeDataProviderTemplate<Snipp
             return;
         }
         this.orders = extensionConfigState.get(context);
-        for (const [id, order] of Object.entries(this.orders)) {
-            this.data[id as UUID] = new SnippetConfigItem(
-                context,
-                snippetConfigState.get(context, order)
-            );
+        for (const [id, order] of Object.entries(this.orders) as [UUID, number][]) {
+            const data = snippetConfigState.get(context, order);
+            if (!data) {
+                continue;
+            }
+            this.data[id] = new SnippetConfigItem(context, id, data);
         }
         this.refresh();
         this.loaded = true;
