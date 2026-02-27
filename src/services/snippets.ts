@@ -42,34 +42,55 @@ enum PlaceHolders {
     Tip = '${3:<!-- description -->}',
     Content = '${4:<!-- body -->}',
     Name = '${1:<!-- name -->}',
-    Items = '${2:<!-- items -->}'
+    Items = '${2:<!-- items -->}',
+    Placeholder = '${0:<!-- placeholder -->}'
 }
 
-const snippetConfigItemSnippet = /*xml*/ `<item>
+const builtInSnippetsText = [
+
+    /*xml*/ `<item>
   <key>${PlaceHolders.Key}</key>
   <tip>${PlaceHolders.Tip}</tip>
   <main language="${PlaceHolders.Language}"><![CDATA[
     ${PlaceHolders.Content}
   ]]></main>
-</item>`;
-
-const snippetConfigFileTemplate = /*xml*/ `<root>
+</item>`,
+    
+    /*xml*/ `<root>
   <name>${PlaceHolders.Name}</name>
   ${PlaceHolders.Items}
-</root>`;
+</root>`,
+    
+    /*xml*/ `<![CDATA[$0]]>`,
+
+    /*xml*/ `^{${PlaceHolders.Placeholder}}`
+    
+];
 
 const builtInSnippets = [
     {
         label: 'item',
-        insertText: snippetConfigItemSnippet,
+        insertText: builtInSnippetsText[0],
         detail: 'Add a snippet config item',
-        kind: vscode.CompletionItemKind.Snippet
+        kind: vscode.CompletionItemKind.Issue
     },
     {
         label: 'init',
-        insertText: snippetConfigFileTemplate,
+        insertText: builtInSnippetsText[1],
         detail: 'Init the snippet config file',
         kind: vscode.CompletionItemKind.File
+    },
+    {
+        label: 'cdata',
+        insertText: builtInSnippetsText[2],
+        detail: 'Add a new CDATA',
+        kind: vscode.CompletionItemKind.Text
+    },
+    {
+        label: 'placeholder',
+        insertText: builtInSnippetsText[3],
+        detail: 'Except for the symbol change ($ => ^), The rest still follows the original grammar.',
+        kind: vscode.CompletionItemKind.Snippet
     }
 ];
 
