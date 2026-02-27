@@ -1,1854 +1,909 @@
 {
-  "injectionSelector": "L:source.snippet",
-  "scopeName": "snippet.injection",
-  "patterns": [
-    {
-      "begin": "<(main) (language)=(\")(c)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.c",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
+    "injectionSelector": "L:source.snippet",
+    "scopeName": "snippet.injection",
+    "patterns": [
         {
-          "include": "source.c"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(cpp)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.cpp",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"snippet\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.snippet" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.cpp"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(csharp)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.csharp",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"c\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.c" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.cs"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(java)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.java",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"cpp\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.cpp" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.java"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(kotlin)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.kotlin",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"csharp\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.cs" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.kotlin"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(dart)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.dart",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"java\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.java" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.dart"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(swift)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.swift",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"kotlin\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.kotlin" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.swift"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(javascript)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.javascript",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"dart\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.dart" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.js"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(typescript)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.typescript",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"swift\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.swift" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.ts"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(vue)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.vue",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"javascript\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.js" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "text.html.vue"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(javascriptreact)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.javascriptreact",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"typescript\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.ts" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.js.jsx"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(typescriptreact)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.typescriptreact",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"vue\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "text.html.vue" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.tsx"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(go)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.go",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"javascriptreact\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.js.jsx" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.go"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(python)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.python",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"typescriptreact\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.tsx" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.python"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(ruby)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.ruby",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"go\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.go" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.ruby"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(shellscript)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.shellscript",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"python\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.python" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.shell"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(php)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.php",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"ruby\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.ruby" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.php"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(perl)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.perl",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"shellscript\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.shell" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.perl"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(rust)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.rust",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"php\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.php" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.rust"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(lua)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.lua",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"perl\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.perl" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.lua"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(sql)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.sql",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"rust\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.rust" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.sql"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(odin)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.odin",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"lua\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.lua" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.odin"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(zig)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.zig",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"sql\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.sql" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.zig"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(d)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.d",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"odin\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.odin" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.d"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(v)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.v",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"zig\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.zig" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.v"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(scala)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.scala",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"d\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.d" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.scala"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(groovy)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.groovy",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"v\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.v" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.groovy"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(fsharp)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.fsharp",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"scala\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.scala" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.fsharp.fsl"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(nim)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.nim",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"groovy\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.groovy" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.nim"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(scss)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.scss",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"fsharp\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.fsharp.fsl" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.css.scss"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(sass)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.sass",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"nim\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.nim" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.sass"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(less)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.less",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"scss\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.css.scss" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.css.less"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(css)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.css",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"sass\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.sass" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.css"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(json)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.json",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"less\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.css.less" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.json"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(yaml)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.yaml",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"css\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.css" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.yaml"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(toml)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.toml",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"json\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.json" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.toml"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(xml)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.xml",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"yaml\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.yaml" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "text.xml"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(protobuf)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.protobuf",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"toml\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.toml" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.proto"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(graphql)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.graphql",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"xml\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "text.xml" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.graphql"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(goctl)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.goctl",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"protobuf\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.proto" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.goctl"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(html)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.html",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"graphql\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.graphql" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "text.html.basic"
-        }
-      ]
-    },
-    {
-      "begin": "<(main) (language)=(\")(dockerfile)(\")>(<!\\[CDATA\\[)",
-      "end": "(\\]\\]>)</(main)>",
-      "name": "meta.embedded.block.dockerfile",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
+            "begin": "(<)(main) (language)=(\"goctl\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.goctl" }]
         },
-        "1": {
-          "name": "entity.name.tag.localname.xml"
-        },
-        "2": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "3": {
-          "name": "string.quoted"
-        },
-        "4": {
-          "name": "entity.other.attribute-name.localname.xml"
-        },
-        "5": {
-          "name": "string.quoted"
-        },
-        "6": {
-          "name": "comment.block.xml"
-        }
-      },
-      "endCaptures": {
-        "0": {
-          "name": "meta.tag.xml"
-        },
-        "1": {
-          "name": "comment.block.xml"
-        },
-        "2": {
-          "name": "entity.name.tag.localname.xml"
-        }
-      },
-      "patterns": [
         {
-          "include": "source.dockerfile"
+            "begin": "(<)(main) (language)=(\"html\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "text.html.basic" }]
+        },
+        {
+            "begin": "(<)(main) (language)=(\"dockerfile\")(>)(<!\\[CDATA\\[)",
+            "end": "(\\]\\]>)(</)(main)(>)",
+            "beginCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "punctuation.definition.tag.xml" },
+                "2": { "name": "entity.name.tag.localname.xml" },
+                "3": { "name": "entity.other.attribute-name.localname.xml" },
+                "4": { "name": "entity.other.attribute-name.localname.xml" },
+                "5": { "name": "punctuation.definition.tag.xml" },
+                "6": { "name": "string.unquoted.cdata.xml" }
+            },
+            "endCaptures": {
+                "0": { "name": "meta.tag.xml" },
+                "1": { "name": "string.unquoted.cdata.xml" },
+                "2": { "name": "punctuation.definition.tag.xml" },
+                "3": { "name": "entity.name.tag.localname.xml" },
+                "4": { "name": "punctuation.definition.tag.xml" }
+            },
+            "patterns": [{ "include": "source.dockerfile" }]
         }
-      ]
-    }
-  ]
+    ]
 }
