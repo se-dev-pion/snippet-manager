@@ -5,7 +5,7 @@ export function buildCompletionItem(config: SnippetConfigItem, language: string)
     if (![language, '*'].includes(config.main['@_language'])) {
         return;
     }
-    const snippet = new vscode.CompletionItem(config.key, vscode.CompletionItemKind.Snippet);
+
     const rawText = config.main['#text'].trimEnd().split('\n');
     while (rawText.length > 0 && !rawText[0]) {
         rawText.shift();
@@ -13,15 +13,17 @@ export function buildCompletionItem(config: SnippetConfigItem, language: string)
     if (rawText.length === 0) {
         return;
     }
-    const firstLine = rawText[0];
-    const leadSpace = firstLine.length - firstLine.trimStart().length;
-    const text = rawText
+    const leadSpace = rawText[0].length - rawText[0].trimStart().length;
+    var text = rawText
         .map(line => {
             const a = line.trimStart();
             const b = line.slice(leadSpace);
             return a.length >= b.length ? a : b;
         })
         .join('\n');
+
+    const snippet = new vscode.CompletionItem(config.key, vscode.CompletionItemKind.Snippet);
+    text = text.replace(/\$/g, "\\$").replace(/\^/g, "$");
     snippet.insertText = new vscode.SnippetString(text);
     snippet.detail = config.tip;
     return snippet;
